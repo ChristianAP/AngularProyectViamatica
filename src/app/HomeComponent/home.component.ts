@@ -37,14 +37,6 @@ export class HomeComponent implements OnInit {
     private router : Router
   ) { }
   ngOnInit(): void {
-    // console.log("hola estoy iniciando el componente");
-    // this.formMaestro = this.formBuilder.group({
-    //   nombre: ['', Validators.required],
-    //   apellido: [''],
-    //   titulo: ['']
-    // })
-
-    // this.getMaestrosAPI()
 
 
   }
@@ -54,81 +46,5 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
-  // async getMaestrosAPI() {
-  //   let api_get_response: MaestroModel[] = await this.homeService.getMaestros()
-  //   this.MAESTROS_LIST = api_get_response;
-  //   console.log(this.MAESTROS_LIST);
 
-  // }
-
-  // async saveMaestro() {
-
-  //   let maestro_new = {
-  //     nombre: this.formMaestro.get("nombre")?.value,
-  //     apellido: this.formMaestro.get("apellido")?.value,
-  //     titulo: this.formMaestro.get("titulo")?.value
-  //   }
-
-  //   let save_maestro_api = await this.homeService.saveMaestro(maestro_new)
-
-  //   this.snackAction(save_maestro_api, 'SAVE')
-
-  // }
-
-  // getByID(data: MaestroModel) {
-  //   this.state_button = false
-  //   this.id_maestro = data.id_maestro;
-  //   this.formMaestro.get("nombre")?.setValue(data.nombre);
-  //   this.formMaestro.get("apellido")?.setValue(data.apellido);
-  //   this.formMaestro.get("titulo")?.setValue(data.titulo);
-  // }
-
-
-  // async updateMaestro() {
-  //   let maestro_update = {
-  //     id_maestro: this.id_maestro,
-  //     nombre: this.formMaestro.get("nombre")?.value,
-  //     apellido: this.formMaestro.get("apellido")?.value,
-  //     titulo: this.formMaestro.get("titulo")?.value
-  //   }
-  //   let update_api_maestro = await this.homeService.updateMaestro(maestro_update);
-
-  //   this.snackAction(update_api_maestro, 'UPDATE');
-
-  // }
-
-  // async deleteMaestro(obj: MaestroModel) {
-  //   let delete_api = await this.homeService.deleteMaestro(obj);
-
-  //   this.snackAction(delete_api, 'DELETE')
-  // }
-
-  // snackAction(api : any , action : any) {
-
-  //   let actions_list = [
-  //     {word : 'DELETE', word_1 : 'ELIMINAR', word_2 : 'ELIMINADO'},
-  //     {word : 'SAVE', word_1 : 'GUARDAR', word_2 : 'GUARDAO'},
-  //     {word : 'UPDATE', word_1 : 'MODIFICAR', word_2 : 'MODIFICADO'},
-  //   ]
-
-  //   if (api.status !== 200) {
-  //     this._snackBar.open(`OCURRIO UN PROBLEMA AL ${(actions_list.find((e) => e.word == action)!.word_1).toUpperCase()} EL REGISTRO!`, "CLOSE");
-  //     this.getMaestrosAPI()
-  //     return;
-  //   }
-  //   this.getMaestrosAPI()
-  //   this._snackBar.open(`REGISTRO ${(actions_list.find((e) => e.word == action)!.word_2).toUpperCase()} CORRECTAMENTE`, "CLOSE", {
-  //     horizontalPosition: 'right',
-  //     verticalPosition: 'top',
-  //   });
-  // }
-
-
-  // refresh(){
-  //   this.state_button = true;
-  //   this.id_maestro = 0
-  //   this.formMaestro.get("nombre")?.setValue("");
-  //   this.formMaestro.get("apellido")?.setValue("");
-  //   this.formMaestro.get("titulo")?.setValue("");
-  // }
 }
