@@ -1,0 +1,35 @@
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;">
+    <div
+        style="width: 80%; padding: 20px; display: flex; flex-direction: row; justify-content: space-between;">
+        <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h1>
+
+                WELCOME!
+            </h1>
+            <h2>
+                Registrese para poder continuar
+            </h2>
+        </div>
+
+        <div style="width: 50%; border-left: 1px solid black; padding: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center;">
+                <form [formGroup]="formLogin" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                    <mat-form-field class="example-full-width" style="width: 70%;">
+                        <mat-label>USERNAME: </mat-label>
+                        <input matInput placeholder="Ingrese su username ..." formControlName='username'>
+                      </mat-form-field>
+                      <mat-form-field class="example-full-width" style="width: 70%;">
+                        <mat-label>PASSWORD: </mat-label>
+                        <input matInput type="password" placeholder="Ingrese su password ..." formControlName='password'>
+                      </mat-form-field>
+
+                      <button mat-raised-button color="accent" style="width: 50%; " (click)="login()"> INICIAR SESIÓN</button>
+
+                      <button mat-button color="warn" style="width: 50%; " (click)="InvitadoLogin()"> Ingresar como Invitado</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

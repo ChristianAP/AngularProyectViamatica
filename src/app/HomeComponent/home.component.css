@@ -1,0 +1,57 @@
+.example-card {
+  max-width: 100%;
+  margin: 20px;
+  background-color: white;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.mat-mdc-cell {
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+.mat-mdc-table .mat-mdc-header-cell {
+  background: rgb(171, 55, 55);
+  color: white;
+  text-align: center;
+}
+
+.mdc-data-table__table {
+  min-width: 90%;
+}
+
+/* .custom-input .mat-input-element {
+  color: black; 
+  background-color: white;
+} */
+
+.mdc-text-field .mdc-text-field__input {
+  color: black;
+}
+
+.mdc-text-field .mdc-floating-label {
+  color: black;
+}
+
+.mdc-text-field--filled {
+  background-color: white;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

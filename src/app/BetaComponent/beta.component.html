@@ -1,0 +1,103 @@
+<mat-card class="example-card">
+    <div style="width: 100%; margin: 20px; display: flex; flex-direction: row; gap: 20px;">
+      <!-- <div style=" width: 28%; display: flex; flex-direction: column; gap: 10px;">
+        <form [formGroup]="formMaestro">
+          <mat-form-field class="custom-input" style="width: 100%;">
+            <mat-label>NOMBRE: </mat-label>
+            <input matInput placeholder="Ingrese el nombre del maestro ..." formControlName='nombre'>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>APELLIDO: </mat-label>
+            <input matInput placeholder="Ingrese el apellido del maestro ..." formControlName='apellido'>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>TITULO: </mat-label>
+            <input matInput placeholder="Ingrese el titulo del maestro ..." formControlName='titulo'>
+          </mat-form-field>
+        </form>
+  
+        <div style="display: flex; justify-content: center; width: 100%; gap: 20px;">
+          <button mat-raised-button color="accent" style="width: 50%; "
+            (click)="state_button ? saveMaestro() : updateMaestro()">{{ state_button ? ' GUARDAR REGISTROS' : 'MODIFICAR
+            REGISTRO'}}</button>
+  
+          <button mat-mini-fab color="accent" (click)="refresh()">
+            <mat-icon>refresh</mat-icon>
+          </button>
+  
+        </div>
+      </div> -->
+      <div style=" width: 48%; display: flex; justify-content: center;">
+        <table mat-table [dataSource]="AUTORES_LIST" class="mat-elevation-z8 demo-table">
+  
+  
+          <ng-container matColumnDef="NRO">
+            <th mat-header-cell *matHeaderCellDef> NRO </th>
+            <td mat-cell *matCellDef="let element" > 1 </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="NOMBRE">
+            <th mat-header-cell *matHeaderCellDef> NOMBRE </th>
+            <td mat-cell *matCellDef="let element"> {{element}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ACCION">
+            <th mat-header-cell *matHeaderCellDef> ACCION </th>
+            <td mat-cell *matCellDef="let element"> 
+                
+                <button mat-icon-button (click)="addFavorito(element)">
+                    <mat-icon style="color: yellow;">star</mat-icon>
+                  </button>
+            
+            </td>
+          </ng-container>
+  
+  
+          <tr mat-header-row *matHeaderRowDef="columns_table_autores"></tr>
+          <tr mat-row (click)="clickTableAutor(row)" *matRowDef="let row; columns: columns_table_autores;"></tr>
+        </table>
+      </div>
+
+      <div style="width: 50%; margin: 10px; display: flex; flex-direction: column;">
+        <div>
+            <H1>OBRAS DEL AUTOR {{name_autor}}</H1>
+
+            <table mat-table [dataSource]="OBRAS_LIST" class="mat-elevation-z8 demo-table">
+  
+  
+                <ng-container matColumnDef="NRO">
+                  <th mat-header-cell *matHeaderCellDef> NRO </th>
+                  <td mat-cell *matCellDef="let element" > 1 </td>
+                </ng-container>
+        
+                <ng-container matColumnDef="TITULO">
+                  <th mat-header-cell *matHeaderCellDef> TITULO </th>
+                  <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                </ng-container>
+        
+                <ng-container matColumnDef="ACCION">
+                    <th mat-header-cell *matHeaderCellDef> ACCION </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        
+                        <button mat-icon-button (click)="addFavoritoObra(element)">
+                            <mat-icon style="color: yellow;">star</mat-icon>
+                          </button>
+                    
+                    </td>
+                  </ng-container>
+        
+                <tr mat-header-row *matHeaderRowDef="columns_table_obras"></tr>
+                <tr mat-row (click)="clickTableObra(row)" *matRowDef="let row; columns: columns_table_obras;"></tr>
+              </table>
+        </div>
+
+        <div>
+            <H1>DESCRIPCION OBRA {{name_obra}}</H1>
+
+            <p>{{descripcion_obra}}</p>
+        </div>
+      </div>
+    </div>
+  </mat-card> 

@@ -1,0 +1,69 @@
+<div style="display: flex; flex-direction: row; gap: 20px;" >
+    <div >
+        <h1 style="padding: 10px; font-weight: bold;">
+            LISTA DE AUTORES FAVORITOS
+        </h1>
+        <div style="width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); ">
+            <div *ngFor="let e of list_favoritos_autores"
+                style="display: flex; flex-direction: column; width: 500px; padding: 10px; justify-content: center; align-items: center;">
+                <div  style="display: flex; flex-direction: row; width: 500px; padding: 10px; justify-content: center; align-items: center;">
+                    <div style="text-transform: uppercase;  font-size: 24px;">
+                        {{e}}
+                    </div>
+                    <div>
+                        <button mat-icon-button (click)="deleteAutorFavorito(e)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="clickTableAutor(e)">
+                            <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+    </div>
+
+    <div style="width: 40%;">
+        <h1>LISTA DE LIBROS:</h1>
+        <p>{{obras}}</p>
+    </div>
+</div>
+
+
+<br>
+<br>
+
+<div style="display: flex; flex-direction: row; gap: 20px;">
+    <div>
+        <h1 style="padding: 10px; font-weight: bold;">
+            LISTA DE OBRAS FAVORITOS
+        </h1>
+        <div style="width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); ">
+            <div *ngFor="let e of list_favoritos_obras"
+                style="display: flex; flex-direction: column; width: 500px; padding: 10px; justify-content: center; align-items: center;">
+                <div  style="display: flex; flex-direction: row; width: 500px; padding: 10px; justify-content: center; align-items: center;">
+                    <div style="text-transform: uppercase;  font-size: 24px;">
+                        {{e}}
+                    </div>
+                    <div>
+                        <button mat-icon-button (click)="deleteOBRASFavorito(e)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="clickTableObra(e)">
+                            <mat-icon>remove_red_eye</mat-icon>
+                        </button>
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+        </div>
+    </div>
+    <div style="width: 40%;">
+        <h1>DESCRIPCION</h1>
+        <p>{{descripcion_obra}}</p>
+    </div>
+</div>
